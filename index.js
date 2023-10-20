@@ -32,14 +32,13 @@ async function run() {
 
     const collections = client.db("productsDB").collection('products');
     const cartCollections = client.db("cartDB").collection('cart');
+
+
     const category = [
       {
         "id": 1,
         "brand_name": "Urban Decay",
         "brand_img": "https://i.ibb.co/475jYWw/urban-decay.png",
-        "slider1": "https://i.ibb.co/NWzqpFx/luchiana-2509818535-1520x394.webp",
-        "slider2": "https://i.ibb.co/593RFKy/luchiana-2517430051-1520x394.webp",
-        "slider3": "https://i.ibb.co/wNfkdG4/luchiana-2517802173-1520x394.webp",
       },
       {
         "id": 2,
