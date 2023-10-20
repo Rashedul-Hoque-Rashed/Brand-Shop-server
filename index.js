@@ -135,6 +135,14 @@ async function run() {
       res.send(result);
     })
 
+    app.get("/cart/:createdAt", async(req,res)=>{
+      const createdAt = req.params.createdAt;
+      const query = {createdAt: createdAt};
+      const courser = cartCollections.find(query);
+      const result = await courser.toArray();
+      res.send(result)
+    })
+
     app.post("/cart", async (req, res) => {
       const addCart = req.body;
       const result = await cartCollections.insertOne(addCart);
